@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Use a pre-trained TableBank Detectron model to detect tables
+
+DETECTRON=../detectron
+MODEL=X101
+CONFIG_MODEL=models/config_$MODEL.yaml
+MODEL_PATH=models/model_$MODEL.pkl
+DATA_DIR=/home/john/Dev/SAIL/data/tgmy-synthetic
+
+python $DETECTRON/tools/infer_simple.py \
+  --cfg $CONFIG_MODEL \
+  --output-dir output \
+  --image-ext png \
+  --wts $MODEL_PATH \
+  $DATA_DIR

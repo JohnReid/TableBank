@@ -1,0 +1,18 @@
+name: TableBank
+channels:
+  - pytorch
+dependencies:
+  - python=3.7
+  - opencv
+  - pytorch-nightly
+  - six
+  - scipy
+  - matplotlib
+  - pip
+  - pip:
+    - pyyaml==3.12
+    - opencv-python
+    - cython
+    - protobuf
+    - future
+    - pycocotools
